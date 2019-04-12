@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C646B0B9225F2B8C00BA857A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C646B0B8225F2B8C00BA857A /* main.m */; };
+		C646B0BC225F2B8C00BA857A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C646B0BB225F2B8C00BA857A /* AppDelegate.m */; };
+		C646B0BF225F2B8C00BA857A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C646B0BE225F2B8C00BA857A /* ViewController.m */; };
+		C646B0C2225F2B8C00BA857A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C646B0C0225F2B8C00BA857A /* Main.storyboard */; };
+		C646B0C4225F2B8C00BA857A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C646B0C3225F2B8C00BA857A /* Assets.xcassets */; };
+		C646B0C7225F2B8C00BA857A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C646B0C5225F2B8C00BA857A /* LaunchScreen.storyboard */; };
+		C646B0D2225F2B8C00BA857A /* HardDecoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C646B0D1225F2B8C00BA857A /* HardDecoderTests.m */; };
+		C646B0DD225F2B8C00BA857A /* HardDecoderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C646B0DC225F2B8C00BA857A /* HardDecoderUITests.m */; };
+		C68010E222606143002BF93D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68010E122606143002BF93D /* VideoToolbox.framework */; };
+		C68010ED22608486002BF93D /* HardDecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C68010EC22608486002BF93D /* HardDecorder.m */; };
+		C68010EF226085F2002BF93D /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C68010EE226085F2002BF93D /* libstdc++.6.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C646B0CE225F2B8C00BA857A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C646B0AC225F2B8C00BA857A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C646B0B3225F2B8C00BA857A;
+			remoteInfo = HardDecoder;
+		};
+		C646B0D9225F2B8C00BA857A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C646B0AC225F2B8C00BA857A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C646B0B3225F2B8C00BA857A;
+			remoteInfo = HardDecoder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C646B0B4225F2B8C00BA857A /* HardDecoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardDecoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C646B0B8225F2B8C00BA857A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C646B0BA225F2B8C00BA857A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C646B0BB225F2B8C00BA857A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C646B0BD225F2B8C00BA857A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C646B0BE225F2B8C00BA857A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C646B0C1225F2B8C00BA857A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C646B0C3225F2B8C00BA857A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C646B0C6225F2B8C00BA857A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C646B0C8225F2B8C00BA857A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C646B0CD225F2B8C00BA857A /* HardDecoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardDecoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C646B0D1225F2B8C00BA857A /* HardDecoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HardDecoderTests.m; sourceTree = "<group>"; };
+		C646B0D3225F2B8C00BA857A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C646B0D8225F2B8C00BA857A /* HardDecoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardDecoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C646B0DC225F2B8C00BA857A /* HardDecoderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HardDecoderUITests.m; sourceTree = "<group>"; };
+		C646B0DE225F2B8C00BA857A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68010E122606143002BF93D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		C68010EB22608486002BF93D /* HardDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardDecoder.h; sourceTree = "<group>"; };
+		C68010EC22608486002BF93D /* HardDecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardDecorder.m; sourceTree = "<group>"; };
+		C68010EE226085F2002BF93D /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C646B0B1225F2B8C00BA857A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68010EF226085F2002BF93D /* libstdc++.6.tbd in Frameworks */,
+				C68010E222606143002BF93D /* VideoToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0CA225F2B8C00BA857A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0D5225F2B8C00BA857A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C646B0AB225F2B8C00BA857A = {
+			isa = PBXGroup;
+			children = (
+				C646B0B6225F2B8C00BA857A /* HardDecoder */,
+				C646B0D0225F2B8C00BA857A /* HardDecoderTests */,
+				C646B0DB225F2B8C00BA857A /* HardDecoderUITests */,
+				C646B0B5225F2B8C00BA857A /* Products */,
+				C68010E022606142002BF93D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C646B0B5225F2B8C00BA857A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C646B0B4225F2B8C00BA857A /* HardDecoder.app */,
+				C646B0CD225F2B8C00BA857A /* HardDecoderTests.xctest */,
+				C646B0D8225F2B8C00BA857A /* HardDecoderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C646B0B6225F2B8C00BA857A /* HardDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				C646B0BA225F2B8C00BA857A /* AppDelegate.h */,
+				C646B0BB225F2B8C00BA857A /* AppDelegate.m */,
+				C646B0BD225F2B8C00BA857A /* ViewController.h */,
+				C68010EB22608486002BF93D /* HardDecoder.h */,
+				C68010EC22608486002BF93D /* HardDecorder.m */,
+				C646B0BE225F2B8C00BA857A /* ViewController.m */,
+				C646B0C0225F2B8C00BA857A /* Main.storyboard */,
+				C646B0C3225F2B8C00BA857A /* Assets.xcassets */,
+				C646B0C5225F2B8C00BA857A /* LaunchScreen.storyboard */,
+				C646B0C8225F2B8C00BA857A /* Info.plist */,
+				C646B0B7225F2B8C00BA857A /* Supporting Files */,
+			);
+			path = HardDecoder;
+			sourceTree = "<group>";
+		};
+		C646B0B7225F2B8C00BA857A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C646B0B8225F2B8C00BA857A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C646B0D0225F2B8C00BA857A /* HardDecoderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C646B0D1225F2B8C00BA857A /* HardDecoderTests.m */,
+				C646B0D3225F2B8C00BA857A /* Info.plist */,
+			);
+			path = HardDecoderTests;
+			sourceTree = "<group>";
+		};
+		C646B0DB225F2B8C00BA857A /* HardDecoderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C646B0DC225F2B8C00BA857A /* HardDecoderUITests.m */,
+				C646B0DE225F2B8C00BA857A /* Info.plist */,
+			);
+			path = HardDecoderUITests;
+			sourceTree = "<group>";
+		};
+		C68010E022606142002BF93D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68010EE226085F2002BF93D /* libstdc++.6.tbd */,
+				C68010E122606143002BF93D /* VideoToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C646B0B3225F2B8C00BA857A /* HardDecoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C646B0E1225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoder" */;
+			buildPhases = (
+				C646B0B0225F2B8C00BA857A /* Sources */,
+				C646B0B1225F2B8C00BA857A /* Frameworks */,
+				C646B0B2225F2B8C00BA857A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HardDecoder;
+			productName = HardDecoder;
+			productReference = C646B0B4225F2B8C00BA857A /* HardDecoder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C646B0CC225F2B8C00BA857A /* HardDecoderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C646B0E4225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoderTests" */;
+			buildPhases = (
+				C646B0C9225F2B8C00BA857A /* Sources */,
+				C646B0CA225F2B8C00BA857A /* Frameworks */,
+				C646B0CB225F2B8C00BA857A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C646B0CF225F2B8C00BA857A /* PBXTargetDependency */,
+			);
+			name = HardDecoderTests;
+			productName = HardDecoderTests;
+			productReference = C646B0CD225F2B8C00BA857A /* HardDecoderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C646B0D7225F2B8C00BA857A /* HardDecoderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C646B0E7225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoderUITests" */;
+			buildPhases = (
+				C646B0D4225F2B8C00BA857A /* Sources */,
+				C646B0D5225F2B8C00BA857A /* Frameworks */,
+				C646B0D6225F2B8C00BA857A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C646B0DA225F2B8C00BA857A /* PBXTargetDependency */,
+			);
+			name = HardDecoderUITests;
+			productName = HardDecoderUITests;
+			productReference = C646B0D8225F2B8C00BA857A /* HardDecoderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C646B0AC225F2B8C00BA857A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = gg;
+				TargetAttributes = {
+					C646B0B3225F2B8C00BA857A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 774P97N9V4;
+						ProvisioningStyle = Automatic;
+					};
+					C646B0CC225F2B8C00BA857A = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C646B0B3225F2B8C00BA857A;
+					};
+					C646B0D7225F2B8C00BA857A = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C646B0B3225F2B8C00BA857A;
+					};
+				};
+			};
+			buildConfigurationList = C646B0AF225F2B8C00BA857A /* Build configuration list for PBXProject "HardDecoder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C646B0AB225F2B8C00BA857A;
+			productRefGroup = C646B0B5225F2B8C00BA857A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C646B0B3225F2B8C00BA857A /* HardDecoder */,
+				C646B0CC225F2B8C00BA857A /* HardDecoderTests */,
+				C646B0D7225F2B8C00BA857A /* HardDecoderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C646B0B2225F2B8C00BA857A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C646B0C7225F2B8C00BA857A /* LaunchScreen.storyboard in Resources */,
+				C646B0C4225F2B8C00BA857A /* Assets.xcassets in Resources */,
+				C646B0C2225F2B8C00BA857A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0CB225F2B8C00BA857A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0D6225F2B8C00BA857A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C646B0B0225F2B8C00BA857A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68010ED22608486002BF93D /* HardDecorder.m in Sources */,
+				C646B0BF225F2B8C00BA857A /* ViewController.m in Sources */,
+				C646B0BC225F2B8C00BA857A /* AppDelegate.m in Sources */,
+				C646B0B9225F2B8C00BA857A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0C9225F2B8C00BA857A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C646B0D2225F2B8C00BA857A /* HardDecoderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C646B0D4225F2B8C00BA857A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C646B0DD225F2B8C00BA857A /* HardDecoderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C646B0CF225F2B8C00BA857A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C646B0B3225F2B8C00BA857A /* HardDecoder */;
+			targetProxy = C646B0CE225F2B8C00BA857A /* PBXContainerItemProxy */;
+		};
+		C646B0DA225F2B8C00BA857A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C646B0B3225F2B8C00BA857A /* HardDecoder */;
+			targetProxy = C646B0D9225F2B8C00BA857A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C646B0C0225F2B8C00BA857A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C646B0C1225F2B8C00BA857A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C646B0C5225F2B8C00BA857A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C646B0C6225F2B8C00BA857A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C646B0DF225F2B8C00BA857A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C646B0E0225F2B8C00BA857A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C646B0E2225F2B8C00BA857A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 774P97N9V4;
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = HardDecoder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C646B0E3225F2B8C00BA857A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 774P97N9V4;
+				GCC_INPUT_FILETYPE = automatic;
+				INFOPLIST_FILE = HardDecoder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C646B0E5225F2B8C00BA857A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HardDecoderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HardDecoder.app/HardDecoder";
+			};
+			name = Debug;
+		};
+		C646B0E6225F2B8C00BA857A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HardDecoderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HardDecoder.app/HardDecoder";
+			};
+			name = Release;
+		};
+		C646B0E8225F2B8C00BA857A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HardDecoderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HardDecoder;
+			};
+			name = Debug;
+		};
+		C646B0E9225F2B8C00BA857A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HardDecoderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test1.test-1.HardDecoderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HardDecoder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C646B0AF225F2B8C00BA857A /* Build configuration list for PBXProject "HardDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C646B0DF225F2B8C00BA857A /* Debug */,
+				C646B0E0225F2B8C00BA857A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C646B0E1225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C646B0E2225F2B8C00BA857A /* Debug */,
+				C646B0E3225F2B8C00BA857A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C646B0E4225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C646B0E5225F2B8C00BA857A /* Debug */,
+				C646B0E6225F2B8C00BA857A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C646B0E7225F2B8C00BA857A /* Build configuration list for PBXNativeTarget "HardDecoderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C646B0E8225F2B8C00BA857A /* Debug */,
+				C646B0E9225F2B8C00BA857A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C646B0AC225F2B8C00BA857A /* Project object */;
+}
