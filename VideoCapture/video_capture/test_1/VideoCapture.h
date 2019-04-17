@@ -11,6 +11,7 @@
 
 #import<UIKit/UIKit.h>
 #import<AVFoundation/AVFoundation.h>
+#import"HardEncoder.h"
 
 @interface VideoCapture:NSObject<AVCaptureVideoDataOutputSampleBufferDelegate>
 
@@ -22,9 +23,13 @@
 
 -(BOOL)SetCameraPosition;
 
+-(BOOL)Close;
+
 -(BOOL)SetCaptureSize:(int)W Height:(int)H AVCaptureDevice:(AVCaptureDevice *)lpDevice;
 
 -(BOOL)SetCaptureFPS:(int)Fps AVCaptureDevice:(AVCaptureDevice*)lpDevice;
+
+-(BOOL)DealNv12:(CVPixelBufferRef)srcBuf;
 
 -(UIImage *)imageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 
@@ -36,6 +41,11 @@
 
 @property(nonatomic)AVCaptureVideoDataOutput *m_pOutput;
 
+@property(nonatomic)char *m_pNV12Data;
+
+@property(nonatomic)int m_iNV12Len;
+
+@property(nonatomic)HardEncoder *m_pEncoder;
 @end
 
 #endif /* VideoCapture_h */

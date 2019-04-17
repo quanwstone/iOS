@@ -13,6 +13,8 @@
 
 -(IBAction)OnButton:(id)obj;
 
+-(IBAction)onClose:(id)sender;
+
 -(BOOL)GetVideoAuthorization;
 
 @property (nonatomic)VideoCapture *m_pVideoCapture;

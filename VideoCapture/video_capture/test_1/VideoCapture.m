@@ -24,6 +24,12 @@
     NSLog(@"VideoCapture::InitVideoCapture Begin.\n");
     
     self.m_pViewController = p;
+    self.m_pNV12Data = NULL;
+    
+    self.m_pEncoder = [[HardEncoder alloc]init];
+    
+    [self.m_pEncoder initSession];
+    [self.m_pEncoder SetPramater];
     
     //创建session，avcapturesession是用于链接input和output
     AVCaptureSession *lpCaptureSession = [[AVCaptureSession alloc]init];
@@ -48,14 +54,15 @@
         NSLog(@"InitVideoCapture::AddOutput Failed.\n");
         return FALSE;
     }
+    //设备默认采集的是nv12[y..uv uv],设置yuv420采集失败
     
-    NSMutableDictionary *lpSettings = [[NSMutableDictionary alloc]init];
+//    NSMutableDictionary *lpSettings = [[NSMutableDictionary alloc]init];
+//    
+//    [lpSettings setObject:[NSNumber numberWithUnsignedInteger:kCVPixelFormatType_32BGRA]
+//                   forKey:(id)kCVPixelBufferPixelFormatTypeKey];
+//    
+//    lpOutput.videoSettings = lpSettings;
     
-    [lpSettings setObject:[NSNumber numberWithUnsignedInteger:kCVPixelFormatType_32BGRA]
-                   forKey:(id)kCVPixelBufferPixelFormatTypeKey];
-    
-    lpOutput.videoSettings = lpSettings;
-
     [lpCaptureSession addOutput:lpOutput];
     
     self.m_pOutput = lpOutput;
@@ -65,6 +72,20 @@
     [lpOutput setSampleBufferDelegate:self queue:VideoQueue];
     
     [self SetCameraPosition];
+    
+    return TRUE;
+}
+//关闭之前需要先停止采集
+-(BOOL)Close
+{
+    NSLog(@"Close.\n");
+    
+    NSArray *lpDeviceInput = [self.m_pCaptureSession inputs];
+    //移除输入设备
+    for(AVCaptureDeviceInput *lpInput in lpDeviceInput)
+    {
+        [self.m_pCaptureSession removeInput:lpInput];
+    }
     
     return TRUE;
 }
@@ -174,13 +195,56 @@
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection
 {
-    NSLog(@"captureOutput.\n");
+    CVPixelBufferRef lpPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    if(NO == CVPixelBufferIsPlanar(lpPixelBuffer))
+    {
+        NSLog(@"BGRA.\n");
+        
+        UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.m_pViewController.image = image;
+        });
+
+    }else//解析nv12
+    {
+        [self DealNv12:lpPixelBuffer];
+    }
+}
+-(BOOL)DealNv12:(CVPixelBufferRef)srcBuf
+{
+    //获取planar个数
+    size_t PlanarCount = CVPixelBufferGetPlaneCount(srcBuf);
+    if(PlanarCount != 2)
+    {
+        NSLog(@"CVPixelBufferGetPlaneCount Failed=%d.\n",(int)PlanarCount);
+        return FALSE;
+    }
+    //读取数据
+    CVPixelBufferLockBaseAddress(srcBuf, 0);
     
-    UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
+
+    size_t H = CVPixelBufferGetHeightOfPlane(srcBuf, 0);
+    size_t W = CVPixelBufferGetWidthOfPlane(srcBuf, 0);
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.m_pViewController.image = image;
-    });
+    if(self.m_pNV12Data == NULL)
+    {
+        _m_iNV12Len = H * W * 3/2;
+        
+        self.m_pNV12Data = malloc(_m_iNV12Len);
+    }
+    
+    char *py = CVPixelBufferGetBaseAddressOfPlane(srcBuf, 0);//y
+    char *puv = CVPixelBufferGetBaseAddressOfPlane(srcBuf, 1);//uv
+    
+    memcpy(self.m_pNV12Data,py,H*W);
+    memcpy(self.m_pNV12Data + H*W,puv,H*W / 2);
+    
+    CVPixelBufferUnlockBaseAddress(srcBuf, 0);
+    
+    [self.m_pEncoder StartEncode:self.m_pNV12Data Len:_m_iNV12Len];
+    
+    return TRUE;
 }
 -(UIImage *)imageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer
 {

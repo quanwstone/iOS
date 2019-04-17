@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6555BAE226705F3003AD504 /* HardEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C6555BAD226705F3003AD504 /* HardEncoder.m */; };
 		C66879A82255F558002B6632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C66879A72255F558002B6632 /* main.m */; };
 		C66879AB2255F558002B6632 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C66879AA2255F558002B6632 /* AppDelegate.m */; };
 		C66879AE2255F558002B6632 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66879AD2255F558002B6632 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6555BAC226705F3003AD504 /* HardEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardEncoder.h; sourceTree = "<group>"; };
+		C6555BAD226705F3003AD504 /* HardEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardEncoder.m; sourceTree = "<group>"; };
 		C66879A32255F558002B6632 /* test_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66879A72255F558002B6632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C66879A92255F558002B6632 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				C66879B72255F558002B6632 /* Info.plist */,
 				C66879A62255F558002B6632 /* Supporting Files */,
 				C66879D92256030D002B6632 /* VideoCapture.h */,
+				C6555BAC226705F3003AD504 /* HardEncoder.h */,
+				C6555BAD226705F3003AD504 /* HardEncoder.m */,
 				C66879DA225603D9002B6632 /* VideoCapture.m */,
 			);
 			path = test_1;
@@ -283,6 +288,7 @@
 				C66879AE2255F558002B6632 /* ViewController.m in Sources */,
 				C66879AB2255F558002B6632 /* AppDelegate.m in Sources */,
 				C66879A82255F558002B6632 /* main.m in Sources */,
+				C6555BAE226705F3003AD504 /* HardEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +520,7 @@
 				C66879D22255F558002B6632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C66879D32255F558002B6632 /* Build configuration list for PBXNativeTarget "test_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				C66879D52255F558002B6632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C66879D62255F558002B6632 /* Build configuration list for PBXNativeTarget "test_1UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				C66879D82255F558002B6632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

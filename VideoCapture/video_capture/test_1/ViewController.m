@@ -56,6 +56,12 @@
     
     return TRUE;
 }
+-(IBAction)onClose:(id)sender
+{
+    [self.m_pVideoCapture StopCaputre];
+    [self.m_pVideoCapture Close];
+    
+}
 //
 -(IBAction) OnButton:(id)obj
 {
